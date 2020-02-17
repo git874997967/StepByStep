@@ -1,7 +1,5 @@
 package medium;
 
-import java.util.List;
-
 public class partitionList {
     public static  class ListNode{
         int val;

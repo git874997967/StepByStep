@@ -34,15 +34,45 @@ public class excelColumn {
 
         return  sb.reverse().toString();
     }
+public static String  convertToString(int n){
+        if(n<1) return "";
+        StringBuffer sb=new StringBuffer();
+        while(n>0){
+            char c=(char)(--n%26+65);
+            n=n/26;
+            sb.insert(0,c);
+        }
+
+    System.out.println(sb.toString());
+    return  sb.toString();
+}
+
+public static int convertToInt(String s){
+        int res=0,temp=1;
+        for (int i = s.length()-1; i >=0 ; i--) {
+            res=res+(s.charAt(i)-64)*temp;
+            temp=temp*26;
+
+        }
+        System.out.println(res);
+        return  res;
+}
+
+
+
 
 
     public static void main(String[] args) {
-
-        titleToNumber("A");
+       /* convertToString(704);
+        convertToString(27);*/
+        convertToInt("A");
+        convertToInt("AA");
+        convertToInt("ZY");
+      /*  titleToNumber("A");
         titleToNumber("AAB");
         titleToNumber("ZY");
         System.out.println(numberToTitle(704));
-        System.out.println(numberToTitle(701));
+        System.out.println(numberToTitle(701));*/
     }
 
 
