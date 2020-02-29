@@ -1,7 +1,5 @@
 package easy;
 
-import java.util.List;
-
 public class reverseList {
 public static class ListNode{
     int val;
